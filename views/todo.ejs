@@ -1,0 +1,15 @@
+<h1>First Node.js ToDoList</h1>
+<h2><strong>Task to do !</strong></h2>
+<ul><% 
+	for(var i = 0 ; i <= tasks.length-1 ; i++) {
+	%>
+
+	<li><a href="/todo/remove/<%= i %>">✘</a> <%= tasks[i]%></li>
+
+	<% } %>
+</ul>
+<br>
+<form  action="/todo/add/" method="post">
+<label for="NewTask">What do I have to do</label>
+<input type="text" name="NewTask" id="NewTask" autofocus></input>
+<button type="submit">Add </button>
